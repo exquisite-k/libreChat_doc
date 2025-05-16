@@ -1,0 +1,59 @@
+# LibreChat 스타일(테마) 변경 가이드
+
+## 개요
+현재 프로젝트 폴더는 LibreChat의 스타일 변경에 필요한 문서를 포함하고 있습니다. 이 가이드는 LibreChat의 클라이언트 스타일만 변경하는 작업 방법을 설명합니다.
+
+## 작업 가능성 확인
+현재 폴더에는 기존 LibreChat 설치는 없지만, 프로젝트 문서('docs/Custom UI Design Specification.md')를 통해 스타일 변경이 가능한 것으로 확인되었습니다. 이 프로젝트는 LibreChat의 백엔드는 그대로 유지하면서 UI 스타일만 변경하는 것을 목표로 합니다.
+
+## 작업 방법
+
+### 1. LibreChat 설치
+먼저 LibreChat을 로컬 환경에 설치해야 합니다:
+1. GitHub에서 LibreChat 저장소 클론: `git clone https://github.com/danny-avila/LibreChat.git`
+2. 설치 가이드(`docs/LibreChat_Local_Setup.md`)에 따라 Docker를 사용하여 LibreChat 설치
+3. `http://localhost:3080`에서 기본 설치 확인
+
+### 2. 스타일 변경 방법
+스타일 변경은 두 가지 접근 방식으로 가능합니다:
+
+#### 방법 1: 기존 클라이언트 스타일 직접 수정
+1. `client/src/styles` 디렉토리에서 기존 CSS 파일 수정
+2. Tailwind 설정 수정: `client/tailwind.config.js`에서 색상, 폰트 등의 테마 설정 변경
+3. 변경 후 Docker 재빌드: `docker compose down && docker compose up --build`
+
+#### 방법 2: custom-ui 폴더를 통한 새로운 UI 개발 (권장)
+문서에 제시된 방법대로 별도의 UI 시스템을 개발:
+
+1. LibreChat 루트 디렉토리에 `custom-ui` 폴더 생성
+2. Next.js 기반 앱 생성: `npx create-next-app@latest custom-ui`
+3. 스타일 시스템 구성:
+   - `custom-ui/styles/theme-light.css`, `theme-dark.css` 파일 생성
+   - 모든 색상, 여백, 폰트 등을 CSS 변수로 관리
+4. 핵심 컴포넌트 개발:
+   - ChatInput, ChatBubble, ChatLayout 등 컴포넌트 제작
+5. 테마 교체 기능 구현:
+   ```jsx
+   <button onClick={() => setTheme('theme-light.css')}>라이트 모드</button>
+   <button onClick={() => setTheme('theme-dark.css')}>다크 모드</button>
+   ```
+6. 개발 서버 실행: `cd custom-ui && npm run dev`
+7. 백엔드 연동: LibreChat API와 연결 (localhost:3080)
+
+## 권장 작업 순서
+1. LibreChat 먼저 설치 및 실행
+2. `custom-ui` 폴더 생성 및 Next.js 앱 설정
+3. 기본 스타일 시스템 구축 (CSS 변수 정의)
+4. 핵심 UI 컴포넌트 개발
+5. 테마 전환 기능 구현
+6. 백엔드 API 연동 테스트
+
+## 장점
+- 기존 LibreChat 코드는 수정하지 않아 원본 유지 가능
+- 디자인 스킨을 쉽게 교체할 수 있는 구조
+- CSS 변수를 통해 일관된 디자인 시스템 구축
+- 다른 프로젝트에도 스타일 재사용 가능
+- 백엔드 API는 그대로 활용
+
+## 결론
+현재 폴더에는 LibreChat이 설치되어 있지 않지만, 문서를 통해 스타일 변경 작업이 가능하며 권장되는 방식은 `custom-ui` 폴더를 통한 별도 UI 개발입니다. 이 방식은 기존 코드 변경 없이 스타일만 커스터마이징할 수 있는 유연한 접근법입니다.
