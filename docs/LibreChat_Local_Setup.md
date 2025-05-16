@@ -39,19 +39,14 @@ cp .env.example .env
 ```env
 PORT=3080
 NEXTAUTH_ENABLED=false
-```
-
-### 2.3 누락된 변수 추가 설정
-
-아래와 같은 경고 메시지가 나타난다면 `.env` 파일에 다음을 추가해야 합니다:
-
-```env
 UID=1000
 GID=1000
 MEILI_MASTER_KEY=your_meili_key_here
+
 ```
 
 > 📌 `MEILI_MASTER_KEY`는 아무 문자열이나 사용할 수 있습니다. 예: `mysecretkey`
+> 📌 키 값은 librechat.yaml 생성하여 따로 관리할 수 있습니다. [.env 파일에 CONFIG_PATH=/app/librechat.yaml 값 설정 필요]
 
 ---
 
