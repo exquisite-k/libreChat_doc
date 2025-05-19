@@ -141,3 +141,19 @@ http://localhost:3080
 ```
 
 `.env` 파일을 수정하고 `docker compose`를 다시 실행하여 인증이나 기타 기능을 활성화할 수 있습니다.
+
+
+
+---
+## LibreChat Ollam
+```
+https://www.librechat.ai/blog/2024-03-02_ollama
+```
+> 해당 사이트에서 Ollama를 사용하여 로컬에서 AI 모델을 실행합니다.
+
+
+```bash
+docker exec -it ollama /bin/bash
+```
+Ollama 명령에 엑세스
+
