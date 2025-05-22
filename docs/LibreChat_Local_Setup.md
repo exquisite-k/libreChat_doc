@@ -170,3 +170,97 @@ GID=1000
 > 해당 key 자체가 선언되지 않으면 해당 리스트 생기지 않음
 > 그말은 선언이 되면 리스트가 생긴다는 말일까?! 도전!
 플랫폼_KEY=user_provided
+
+
+
+
+<!-- 뭔가 될것 같음 -->
+cd LibreChat
+docker compose up -d
+
+docker ps
+확인
+
+cd client
+npm run dev
+
+
+<!-- env -->
+#========== 추가사항 ==========#
+REDIS_URL=redis://redis:6379
+MEILISEARCH_HOST=http://meilisearch:7700
+VITE_APP_PORT=3080
+
+NEXTAUTH_ENABLED=false
+
+GOOGLE_KEY=키 넣으셈
+GOOGLE_MODELS=gemini-2.5-flash-preview-04-17
+
+CONFIG_PATH=/app/librechat.yaml
+
+
+
+
+
+
+<!-- docker-compose.override.yml -->
+version: '3.4'
+ 
+services:
+  api:
+    volumes:
+      - type: bind
+        source: ./librechat.yaml
+        target: /app/librechat.yaml
+
+
+
+
+
+<!-- librechat.yaml -->
+version: 1.0.8
+ 
+cache: true
+ 
+interface:
+  # Privacy policy settings
+  privacyPolicy:
+    externalUrl: 'https://librechat.ai/privacy-policy'
+    openNewTab: true
+ 
+  # Terms of service
+  termsOfService:
+    externalUrl: 'https://librechat.ai/tos'
+    openNewTab: true
+ 
+registration:
+  socialLogins: ["discord", "facebook", "github", "google", "openid"]
+ 
+endpoints:
+  custom:
+
+    - name: "Your Endpoint"
+      apiKey: "user_provided"  # No need for ${} syntax here
+      
+    # Ollama
+    - name: "Ollama"
+      apiKey: "ollama"
+      # use 'host.docker.internal' instead of localhost if running LibreChat in a docker container
+      baseURL: "http://localhost:11434/v1/" 
+      models:
+      default: [
+        "llama2",
+        "mistral",
+        "codellama",
+        "dolphin-mixtral",
+        "mistral-openorca"
+        ]
+      # fetching list of models is supported but the `name` field must start
+      # with `ollama` (case-insensitive), as it does in this example.
+      fetch: true
+      titleConvo: true
+      titleModel: "current_model"
+      summarize: false
+      summaryModel: "current_model"
+      forcePrompt: false
+      modelDisplayLabel: "Ollama"
