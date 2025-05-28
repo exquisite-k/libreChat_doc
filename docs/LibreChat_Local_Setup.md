@@ -218,49 +218,45 @@ services:
 
 
 <!-- librechat.yaml -->
-version: 1.0.8
- 
+version: 1.2.1
+
 cache: true
- 
+
 interface:
+  # customWelcome: "Welcome to LibreChat! Enjoy your experience."
   # Privacy policy settings
   privacyPolicy:
     externalUrl: 'https://librechat.ai/privacy-policy'
     openNewTab: true
- 
-  # Terms of service
-  termsOfService:
-    externalUrl: 'https://librechat.ai/tos'
-    openNewTab: true
- 
-registration:
-  socialLogins: ["discord", "facebook", "github", "google", "openid"]
- 
-endpoints:
-  custom:
 
-    - name: "Your Endpoint"
-      apiKey: "user_provided"  # No need for ${} syntax here
-      
+registration:
+  socialLogins: ['github', 'google', 'discord', 'openid', 'facebook', 'apple']
+
+# actions:
+#   allowedDomains:
+#     - "swapi.dev"
+#     - "librechat.ai"
+#     - "google.com"
+
+endpoints:
+
+  custom:
     # Ollama
-    - name: "Ollama"
-      apiKey: "ollama"
-      # use 'host.docker.internal' instead of localhost if running LibreChat in a docker container
-      baseURL: "http://localhost:11434/v1/" 
+    - name: 'Ollama'
+      apiKey: 'ollama'
+
+      # Docker로 LibreChat을 실행한다면 'localhost'를 'host.docker.internal'로 변경해서 사용하세요.
+      baseURL: "http://host.docker.internal:11434/v1/"
+      
       models:
-      default: [
-        "llama2",
-        "mistral",
-        "codellama",
-        "dolphin-mixtral",
-        "mistral-openorca"
-        ]
-      # fetching list of models is supported but the `name` field must start
-      # with `ollama` (case-insensitive), as it does in this example.
-      fetch: true
+        default:
+          [
+            "llama2",
+          ]
+        fetch: true
       titleConvo: true
       titleModel: "current_model"
       summarize: false
       summaryModel: "current_model"
       forcePrompt: false
-      modelDisplayLabel: "Ollama"
+      modelDisplayLabel: 'Ollama'
