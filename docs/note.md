@@ -17,3 +17,43 @@ docker exec -it ollama /bin/bash
 Ollama 명령에 엑세스
 
 
+
+
+라마가 삭제되었을때 어떻게 설치하고 실행할지 알아야함
+
+
+
+
+>>
+
+https://ollama.com/
+
+>
+모델 다운
+ - [추천] deepseek-r1: 7b ~ 14b
+
+>
+
+https://cantips.com/3903
+[Open WebUI] 내 PC나 Mac에 설치해 사용하는 ChatGPT 스타일의 대화형 인공 지능
+
+https://cantips.com/3899
+[NVIDIA ChatRTX] 내 PC에 설치해 사용하는 대화형 인공 지능
+
+https://cantips.com/3901
+[ollama] 내 Mac에 설치해 사용하는 대화형 인공 지능
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
