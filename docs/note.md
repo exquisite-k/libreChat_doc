@@ -34,14 +34,18 @@ https://ollama.com/
 
 >
 
-https://cantips.com/3903
-[Open WebUI] 내 PC나 Mac에 설치해 사용하는 ChatGPT 스타일의 대화형 인공 지능
 
 https://cantips.com/3899
 [NVIDIA ChatRTX] 내 PC에 설치해 사용하는 대화형 인공 지능
 
 https://cantips.com/3901
 [ollama] 내 Mac에 설치해 사용하는 대화형 인공 지능
+
+https://cantips.com/3903
+[Open WebUI] 내 PC나 Mac에 설치해 사용하는 ChatGPT 스타일의 대화형 인공 지능
+
+
+
 
 
 
