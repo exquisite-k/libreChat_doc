@@ -225,6 +225,9 @@ endpoints:
 ---
 
 ### `#`*`Ollama`*
+> ---
+>   * [Ollama 설치 가이드 : Docker 설치 방법을 참고](https://www.librechat.ai/blog/2024-03-02_ollama#install-ollama)
+> ---
 ``` librechat.yaml
 endpoints:
   custom:
