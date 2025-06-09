@@ -81,9 +81,11 @@ NEXTAUTH_ENABLED=false                            <- 로그인 기능 사용 여
 \
 ***[수정]***
 ```.env
+ENDPOINTS=사용모델명,사용모델명                   <- 노출할 엔드포인트 설정
 ALLOW_REGISTRATION=false                          <- 타인 계정 생성 여부
 ```
 > ---
+>   * ENDPOINTS는 openAI,assistants,azureOpenAI,google,gptPlugins,anthropic로 기본 셋팅되어있습니다.(주석처리)
 >   * ALLOW_REGISTRATION는 다른 사람도 계정을 생성 유무를 설정할 수 있는 속성입니다.
 >   * true = 허가, false = 불가
 > ---
