@@ -1,7 +1,26 @@
 # **🛠️ 명령어 및 기타 작업 가이드**
 
+## **📁 LibreChat 디렉터리 구조**
+```
+LibreChat/
+├── client/
+│   ├── src/                        <- 프론트엔드 코드 (React 기반)
+│   ├── public/                     <- 정적 리소스
+│
+├── api/
+│   ├── server/                     <- 백엔드 API 서버
+│
+├── .env                            <- 환경 변수 파일
+├── docker-compose.override.yml     <- Docker 설정 파일
+├── librechat.yaml                  <- librechat 설정 파일
+├── README.md                       <- 프로젝트 설명(markdown)
+```
+
 ## **📝 Docker 실시간 로그 조회**
 ```bash
+# 현재 로그 조회
+docker compose logs
+
 # 실시간 로그 조회
 docker compose logs -f
 
@@ -9,7 +28,7 @@ docker compose logs -f
 docker system df
 ```
 > --- 
-> * 로그 조회는 실시간으로 계속 노출되며, 종료는 따로 명령해주어야 합니다. (Ctrl + c)
+> * `docker compose logs -f` 명령어는 실시간으로 계속 노출되며, 종료는 따로 명령해주어야 합니다. (Ctrl + c)
 > ---
 
 ---
