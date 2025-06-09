@@ -38,14 +38,16 @@ cp .env.example .env
 \
 ***[확인]***
 ```.env
-HOST=localhost
-PORT=3080
-MONGO_URI=mongodb://127.0.0.1:27017/LibreChat
-DOMAIN_CLIENT=http://localhost:3080
-DOMAIN_SERVER=http://localhost:3080
+HOST=localhost                                    <- 사용할 호스트
+PORT=3080                                         <- 포트 변호
+MONGO_URI=mongodb://127.0.0.1:27017/LibreChat     <- 
+DOMAIN_CLIENT=http://localhost:3080               <- 
+DOMAIN_SERVER=http://localhost:3080               <- 
 ```
 > ---
 >   * `UID=1000`, `GID=1000`는 주석처리가 되어있어야 합니다.
+>     * `UID (User ID)` : 운영체제에서 사용자 계정을 식별하는 숫자입니다.(사용자 계정 이름 대신 숫자로 표현)
+>     * `GID (Group ID)` : 그룹을 식별하는 숫자입니다.(여러 사용자가 속한 그룹 번호의 개념)
 >   * 활성화가 되어있으면 실행이 안됩니다.
 > ---
 
@@ -67,10 +69,10 @@ DOMAIN_SERVER=http://localhost:3080
 \
 ***[추가]***
 ```.env
-REDIS_URL=redis://redis:6379
-MEILISEARCH_HOST=http://meilisearch:7700
-VITE_APP_PORT=3080
-NEXTAUTH_ENABLED=false
+REDIS_URL=redis://redis:6379                      <- 
+MEILISEARCH_HOST=http://meilisearch:7700          <- 
+VITE_APP_PORT=3080                                <- 
+NEXTAUTH_ENABLED=false                            <- 로그인 기능 사용 여부
 ```
 > ---
 >   * 각각 frontend, backend를 위한 값이라 생각(확인해봐야함)
@@ -79,7 +81,7 @@ NEXTAUTH_ENABLED=false
 \
 ***[수정]***
 ```.env
-ALLOW_REGISTRATION=false
+ALLOW_REGISTRATION=false                          <- 타인 계정 생성 여부
 ```
 > ---
 >   * ALLOW_REGISTRATION는 다른 사람도 계정을 생성 유무를 설정할 수 있는 속성입니다.
