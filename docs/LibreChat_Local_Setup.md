@@ -4,7 +4,7 @@ Docker를 사용하여 로컬 환경에서 LibreChat을 설치하고 실행하�
 
 > ---
 >   **💡 사전 준비 사항**
->   진행하기 전에 설치되어 있어야 합니다.
+>   *( 진행하기 전에 설치되어 있어야 합니다. )*
 >   * [Git](https://git-scm.com/downloads)
 >   * [Docker Desktop](https://www.docker.com/products/docker-desktop/)\
 >   (Docker Engine이 실행 중이어야 합니다.)
