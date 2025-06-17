@@ -21,7 +21,7 @@ LibreChat/
 │   │   ├── theme-dark.css
 │   │   └── index.css
 │   ├── tailwind.config.js
-│   └── ...ㅆㅆ
+│   └── ...
 ├── docker-compose.yml
 └── ...
 ```
