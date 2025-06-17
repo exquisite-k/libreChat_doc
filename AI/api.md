@@ -13,3 +13,14 @@ https://openrouter.ai/
 > ---
 
 파일 분류 // 파일 이동
+
+
+backUp 완료
+data_folder.dnt 완료
+DI 완료
+
+
+DI_SubPJ 진행중
+
+
+LibreChat_Test 는 제일 마지막에 진행
