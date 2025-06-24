@@ -27,7 +27,7 @@ Sample
 
 ```
 
-## [진행중]**( `LibreChat_Test`는 제일 마지막에 진행 )**
+## [진행중]**( `LibreChat_Test`, `salesGeni_sample`는 제일 마지막에 진행 )**
 ```css
 Test
 
