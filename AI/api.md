@@ -24,12 +24,13 @@ digitalJiphyeonjeon
 diplomacyDB
 laylay
 Sample
+Test
 
 ```
 
 ## [진행중]**( `LibreChat_Test`, `salesGeni_sample`는 제일 마지막에 진행 )**
 ```css
-Test
+mofa
 
 ```
 
@@ -38,7 +39,6 @@ Test
 eduGenie_sample
 LibreChat_Test
 
-mofa
 nestJop
 
 novaNook
