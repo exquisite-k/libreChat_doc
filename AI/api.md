@@ -26,26 +26,25 @@ laylay
 Sample
 Test
 mofa
+novaNook
+nestJop
+eduGenie_sample
 
 ```
 
 ## [진행중]**( `LibreChat_Test`, `salesGeni_sample`는 제일 마지막에 진행 )**
 ```css
-확인 후 분류요함
+
+DI
 
 ```
 
 ## [대기]
 ```css
-eduGenie_sample
+
+salesGeni_sample
+확인 후 분류요함
+
 LibreChat_Test
 
-nestJop
-DI
-novaNook
-salesGeni_sample
-
-
 ```
-
-???
