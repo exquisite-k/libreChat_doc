@@ -18,7 +18,6 @@ https://openrouter.ai/
 ```css
 backUp
 data_folder.dnt
-
 DI_SubPJ
 digitalJiphyeonjeon
 diplomacyDB
@@ -29,22 +28,20 @@ mofa
 novaNook
 nestJop
 eduGenie_sample
+DI
+salesGeni_sample
+
 
 ```
 
 ## [진행중]**( `LibreChat_Test`, `salesGeni_sample`는 제일 마지막에 진행 )**
 ```css
-
-DI
+LibreChat_Test
 
 ```
 
 ## [대기]
 ```css
-
-salesGeni_sample
 확인 후 분류요함
-
-LibreChat_Test
 
 ```
