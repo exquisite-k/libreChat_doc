@@ -13,35 +13,3 @@ https://openrouter.ai/
 > ---
 
 파일 분류 // 파일 이동
-
-## [완료]
-```css
-backUp
-data_folder.dnt
-DI_SubPJ
-digitalJiphyeonjeon
-diplomacyDB
-laylay
-Sample
-Test
-mofa
-novaNook
-nestJop
-eduGenie_sample
-DI
-salesGeni_sample
-
-
-```
-
-## [진행중]**( `LibreChat_Test`, `salesGeni_sample`는 제일 마지막에 진행 )**
-```css
-LibreChat_Test
-
-```
-
-## [대기]
-```css
-확인 후 분류요함
-
-```
